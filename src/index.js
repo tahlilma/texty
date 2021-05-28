@@ -37,6 +37,12 @@ const urlValidator = (url) => {
 // Discord Part
 client.on('ready', () => {
     console.log('Bot Started');
+    client.user.setPresence({
+        activity : {
+            name: `for ${prefix}help`,
+            type: 'WATCHING'
+        }
+    });
 });
 
 client.on('message', async (message) => {
