@@ -49,7 +49,7 @@ client.on('message', async (message) => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
     
     const args = message.content.slice(prefix.length).trim().split(' ');
-	const command = args.shift().toLowerCase();
+    const command = args.shift().toLowerCase();
     
     // Help Command
     if (command === 'help') {
@@ -100,7 +100,6 @@ client.on('message', async (message) => {
                 )
                 .setImage(args[0])
                 .setTimestamp();
-
             message.channel.send(resultEmbed);
         } else {
             message.channel.send('**Please enter a proper url which ends in the formats mentioned in the help document.**');
